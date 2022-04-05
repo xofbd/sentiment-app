@@ -2,8 +2,9 @@ SHELL:=/bin/bash
 VENV := venv
 DATA := data
 ACTIVATE_VENV := source $(VENV)/bin/activate
-MODEL = app/model/my_model.dill.gz
+MODEL := app/model/my_model.dill.gz
 
+.PHONY: all
 all: clean deploy
 
 $(VENV): requirements.txt
